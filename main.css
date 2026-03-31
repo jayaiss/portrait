@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden; /* Hides any accidental scrollbars */
+}
+
+p {
+    /* Text styling */
+    font-size: 12px;
+    line-height: 10px;
+    text-align: justify;
+    margin: 0;
+    
+    /* Force the text block to fill the entire screen */
+    width: 100vw;
+    height: 100vh;
+    overflow-wrap: break-word; 
+    
+    /* Background image setup */
+    background-image: url('picture.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Locks the image to the screen, not the text */
+    
+    /* Size of the image - 'contain' keeps the whole face visible */
+    background-size: contain; 
+    
+    /* The magic clipping effect */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
